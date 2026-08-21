@@ -54,6 +54,7 @@
       color: #ff9100;
       border-left: 4px solid #ff9100;
       padding-left: 10px;
+      margin-top: 30px;
     }
 
     .product-item {
@@ -72,6 +73,7 @@
       font-weight: bold;
       display: block;
       margin-bottom: 7px;
+      text-align: right;
     }
 
     .buy-btn {
@@ -81,6 +83,11 @@
       padding: 9px 16px;
       border-radius: 8px;
       cursor: pointer;
+      font-weight: bold;
+    }
+
+    .buy-btn:active {
+      transform: scale(0.97);
     }
 
     .payment-card {
@@ -107,6 +114,12 @@
       text-align: center;
       line-height: 1.8;
       margin-top: 25px;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
     }
   </style>
 </head>
@@ -142,7 +155,7 @@
   <h2>🎫 Ваучеры</h2>
 
   <div class="product-item">
-    <span>Еженедельный Lite</span>
+    <span>🎫 Еженедельный Lite</span>
     <div>
       <span class="product-price">40 сом</span>
       <button class="buy-btn"
@@ -153,6 +166,201 @@
   </div>
 
   <div class="product-item">
-    <span>Ваучер на неделю</span>
+    <span>🎫 Ваучер на неделю</span>
     <div>
-      <span class="product
+      <span class="product-price">160 сом</span>
+      <button class="buy-btn"
+        onclick="buyItem('🎫 Ваучер на неделю', '160 сом')">
+        Купить
+      </button>
+    </div>
+  </div>
+
+  <div class="product-item">
+    <span>🎫 Ваучер на месяц</span>
+    <div>
+      <span class="product-price">560 сом</span>
+      <button class="buy-btn"
+        onclick="buyItem('🎫 Ваучер на месяц', '560 сом')">
+        Купить
+      </button>
+    </div>
+  </div>
+
+  <h2>💎 Алмазы</h2>
+
+  <div class="product-item">
+    <span>💎 110 алмазов</span>
+    <div>
+      <span class="product-price">80 сом</span>
+      <button class="buy-btn"
+        onclick="buyItem('💎 110 алмазов', '80 сом')">
+        Купить
+      </button>
+    </div>
+  </div>
+
+  <div class="product-item">
+    <span>💎 341 алмаз</span>
+    <div>
+      <span class="product-price">240 сом</span>
+      <button class="buy-btn"
+        onclick="buyItem('💎 341 алмаз', '240 сом')">
+        Купить
+      </button>
+    </div>
+  </div>
+
+  <div class="product-item">
+    <span>💎 572 алмаза</span>
+    <div>
+      <span class="product-price">390 сом</span>
+      <button class="buy-btn"
+        onclick="buyItem('💎 572 алмаза', '390 сом')">
+        Купить
+      </button>
+    </div>
+  </div>
+
+  <div class="product-item">
+    <span>💎 1166 алмазов</span>
+    <div>
+      <span class="product-price">780 сом</span>
+      <button class="buy-btn"
+        onclick="buyItem('💎 1166 алмазов', '780 сом')">
+        Купить
+      </button>
+    </div>
+  </div>
+
+  <div class="product-item">
+    <span>💎 2398 алмазов</span>
+    <div>
+      <span class="product-price">1550 сом</span>
+      <button class="buy-btn"
+        onclick="buyItem('💎 2398 алмазов', '1550 сом')">
+        Купить
+      </button>
+    </div>
+  </div>
+
+  <div class="product-item">
+    <span>💎 6160 алмазов</span>
+    <div>
+      <span class="product-price">3800 сом</span>
+      <button class="buy-btn"
+        onclick="buyItem('💎 6160 алмазов', '3800 сом')">
+        Купить
+      </button>
+    </div>
+  </div>
+
+  <div id="payment-zone" class="payment-card">
+
+    <h3>📢 ИНСТРУКЦИЯ ПО ОПЛАТЕ</h3>
+
+    <p>
+      Сумма к оплате:
+      <span id="pay-price" class="highlight-red">0 сом</span>
+    </p>
+
+    <p>Выберите способ оплаты:</p>
+
+    <p>🟢 <b>M-Bank</b></p>
+    <p>🔵 <b>О!Деньги</b></p>
+    <p>🟡 <b>ELQR</b></p>
+
+    <br>
+
+    📞 Номер:
+    <span class="phone-style">0709065666</span>
+
+    <br><br>
+
+    👤 Получатель:
+    <b>ТУРДУКАН Н.</b>
+
+  </div>
+
+  <div class="safe">
+
+    ❗️ Все донаты выполняются без входа в аккаунт, только по ID!<br>
+
+    🛡️ БЕЗОПАСНО 💯<br>
+
+    ⚡ БЕЗ КОМИССИИ<br>
+
+    🔐 БЕЗ ВХОДА В АККАУНТ
+
+  </div>
+
+  <div class="contact">
+    📞 Писать сюда:
+    <b>+996 777 464 932</b>
+  </div>
+
+</div>
+
+<script>
+
+async function buyItem(name, price) {
+
+  const idInput =
+    document.getElementById('player-id').value.trim();
+
+  const contact =
+    document.getElementById('player-contact').value.trim();
+
+  if (!idInput) {
+
+    alert('Пожалуйста, сначала введите ID игрока!');
+
+    document.getElementById('player-id').focus();
+
+    return;
+  }
+
+  document.getElementById('pay-price').innerText = price;
+
+  document.getElementById('payment-zone').style.display = 'block';
+
+  try {
+
+    await fetch(
+      'https://shiny-sunset-7085.naimakubanychbekova96.workers.dev',
+      {
+        method: 'POST',
+
+        headers: {
+          'Content-Type': 'application/json'
+        },
+
+        body: JSON.stringify({
+          name: name,
+          price: price,
+          playerId: idInput,
+          contact: contact
+        })
+      }
+    );
+
+  } catch (error) {
+
+    console.error(
+      'Ошибка отправки заказа:',
+      error
+    );
+
+  }
+
+  document
+    .getElementById('payment-zone')
+    .scrollIntoView({
+      behavior: 'smooth'
+    });
+}
+
+</script>
+
+</body>
+</html>
