@@ -4,166 +4,155 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AMIR DIAMOND KGZ — Магазин алмазов Free Fire</title>
+
   <style>
-    body { font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; background: #121826; color: #fff; padding: 20px; display: flex; justify-content: center; }
-    .container { max-width: 600px; width: 100%; background: #1a2333; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
-    h1 { text-align: center; color: #00e5ff; font-size: 28px; }
-    .subtitle { text-align: center; color: #aaa; margin-bottom: 30px; }
-    .form-section { background: #243046; padding: 20px; border-radius: 14px; margin-bottom: 25px; }
-    input { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #2f3e5a; background: #121826; color: #fff; box-sizing: border-box; }
-    h2 { border-left: 4px solid #ff9100; padding-left: 10px; color: #ff9100; }
-    .product-item { display: flex; justify-content: space-between; background: #243046; padding: 15px; margin-bottom: 10px; border-radius: 10px; }
-    .product-price { color: #00e5ff; font-weight: bold; }
-    .buy-btn { background: #ff9100; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
-    .payment-card { display: none; background: #fffbdf; color: #111; padding: 20px; border-radius: 14px; margin-top: 30px; border: 2px solid #ffea00; }
-    .highlight-red { color: #cc0000; font-weight: bold; }
-    .phone-style { font-size: 22px; font-weight: bold; color: #111; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #121826;
+      color: white;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #1a2333;
+      padding: 25px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00e5ff;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #aaa;
+    }
+
+    .form-section {
+      background: #243046;
+      padding: 20px;
+      border-radius: 14px;
+      margin: 25px 0;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid #2f3e5a;
+      background: #121826;
+      color: white;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      color: #ff9100;
+      border-left: 4px solid #ff9100;
+      padding-left: 10px;
+    }
+
+    .product-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      background: #243046;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    .product-price {
+      color: #00e5ff;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 7px;
+    }
+
+    .buy-btn {
+      background: #ff9100;
+      color: white;
+      border: none;
+      padding: 9px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .payment-card {
+      display: none;
+      background: #fffbdf;
+      color: #111;
+      padding: 20px;
+      border-radius: 14px;
+      margin-top: 25px;
+      border: 2px solid #ffea00;
+    }
+
+    .highlight-red {
+      color: #cc0000;
+      font-weight: bold;
+    }
+
+    .phone-style {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .safe {
+      text-align: center;
+      line-height: 1.8;
+      margin-top: 25px;
+    }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <h1>💎 AMIR DIAMOND KGZ 💎</h1>
-    <p class="subtitle">Магазин алмазов Free Fire 🔥</p>
+  <h1>💎 AMIR DIAMOND KGZ 💎</h1>
 
-    <div class="form-section">
-      <h4>1. Введите данные игрока:</h4>
+  <p class="subtitle">
+    Всем привет! 👋 Представляю вам магазин алмазов Free Fire 🔥
+  </p>
 
-      <input
-        type="number"
-        id="player-id"
-        placeholder="ID во Free Fire"
-      >
+  <div class="form-section">
 
-      <input
-        type="text"
-        id="player-contact"
-        placeholder="WhatsApp/Telegram (необязательно)"
-      >
-    </div>
+    <h3>1. Введите данные игрока:</h3>
 
-    <h2>💎 Алмазы</h2>
+    <input
+      type="number"
+      id="player-id"
+      placeholder="ID во Free Fire"
+    >
 
-    <div class="product-list">
-
-      <div class="product-item">
-        <span>💎 110 алмазов</span>
-        <div>
-          <span class="product-price">80 сом</span>
-          <button
-            class="buy-btn"
-            onclick="buyItem('💎 110 алмазов', '80 сом')"
-          >
-            Купить
-          </button>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <span>💎 341 алмаз</span>
-        <div>
-          <span class="product-price">240 сом</span>
-          <button
-            class="buy-btn"
-            onclick="buyItem('💎 341 алмаз', '240 сом')"
-          >
-            Купить
-          </button>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <span>💎 572 алмаза</span>
-        <div>
-          <span class="product-price">390 сом</span>
-          <button
-            class="buy-btn"
-            onclick="buyItem('💎 572 алмаза', '390 сом')"
-          >
-            Купить
-          </button>
-        </div>
-      </div>
-
-    </div>
-
-    <div id="payment-zone" class="payment-card">
-
-      <h3>📢 ИНСТРУКЦИЯ ПО ОПЛАТЕ:</h3>
-
-      Переведите
-      <span id="pay-price" class="highlight-red">0 сом</span>
-      через <b>Mbank</b> или <b>ELQR</b>.
-
-      <br><br>
-
-      📞 Номер:
-      <span class="phone-style">0709065666</span>
-
-      <br>
-
-      👤 Получатель: <b>ТУРДУКАН Н.</b>
-
-    </div>
+    <input
+      type="text"
+      id="player-contact"
+      placeholder="WhatsApp/Telegram (необязательно)"
+    >
 
   </div>
 
-  <script>
-    async function buyItem(name, price) {
+  <h2>🎫 Ваучеры</h2>
 
-      const idInput =
-        document.getElementById('player-id').value.trim();
+  <div class="product-item">
+    <span>Еженедельный Lite</span>
+    <div>
+      <span class="product-price">40 сом</span>
+      <button class="buy-btn"
+        onclick="buyItem('🎫 Еженедельный Lite', '40 сом')">
+        Купить
+      </button>
+    </div>
+  </div>
 
-      const contact =
-        document.getElementById('player-contact').value.trim();
-
-      if (!idInput) {
-        alert('Пожалуйста, сначала введите ID игрока!');
-        document.getElementById('player-id').focus();
-        return;
-      }
-
-      document.getElementById('pay-price').innerText = price;
-
-      document.getElementById('payment-zone').style.display = 'block';
-
-      try {
-
-        await fetch(
-          'https://shiny-sunset-7085.naimakubanychbekova96.workers.dev',
-          {
-            method: 'POST',
-
-            headers: {
-              'Content-Type': 'application/json'
-            },
-
-            body: JSON.stringify({
-              name: name,
-              price: price,
-              playerId: idInput,
-              contact: contact
-            })
-          }
-        );
-
-      } catch (error) {
-
-        console.error(
-          'Ошибка отправки заказа:',
-          error
-        );
-
-      }
-
-      document
-        .getElementById('payment-zone')
-        .scrollIntoView({
-          behavior: 'smooth'
-        });
-    }
-  </script>
-
-</body>
-</html>
+  <div class="product-item">
+    <span>Ваучер на неделю</span>
+    <div>
+      <span class="product
