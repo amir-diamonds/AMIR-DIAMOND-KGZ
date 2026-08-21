@@ -3,37 +3,345 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AMIR DIAMOND KGZ</title>
-  <link rel="stylesheet" href="style.css">
+  <title>AMIR DIAMOND KGZ — Магазин алмазов Free Fire</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #121826;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: #1a2333;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      text-align: center;
+      color: #00e5ff;
+      font-size: 28px;
+      margin-bottom: 5px;
+      text-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .form-section {
+      background: #243046;
+      padding: 20px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      border: 1px solid #2f3e5a;
+    }
+
+    .form-section h4 {
+      margin-top: 0;
+      color: #00e5ff;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #2f3e5a;
+      background: #121826;
+      color: #fff;
+      box-sizing: border-box;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #00e5ff;
+      outline: none;
+      box-shadow: 0 0 8px rgba(0, 229, 255, 0.2);
+    }
+
+    h2 {
+      border-left: 4px solid #ff9100;
+      padding-left: 10px;
+      font-size: 20px;
+      margin-top: 30px;
+      color: #ff9100;
+    }
+
+    .product-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .product-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #243046;
+      padding: 15px 20px;
+      border-radius: 10px;
+      border: 1px solid #2f3e5a;
+    }
+
+    .product-info {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .product-price {
+      color: #00e5ff;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .buy-btn {
+      background: #ff9100;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .buy-btn:hover {
+      background: #e68200;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .feature-card {
+      background: #1f2a3f;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #bbb;
+    }
+
+    .feature-card strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .payment-card {
+      display: none;
+      background: #fffbdf;
+      color: #111;
+      padding: 20px;
+      border-radius: 14px;
+      margin-top: 30px;
+      border: 2px solid #ffea00;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .payment-card h3 {
+      margin-top: 0;
+      color: #cc0000;
+      font-size: 18px;
+    }
+
+    .payment-details {
+      background: #f0eccc;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+      font-family: monospace;
+      font-size: 15px;
+    }
+
+    .copy-btn {
+      background: #0044cc;
+      color: white;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      font-family: sans-serif;
+      margin-left: 10px;
+    }
+
+    .copy-btn:hover {
+      background: #003399;
+    }
+
+    .highlight-red { color: #cc0000; font-weight: bold; }
+    .highlight-blue { color: #0044cc; font-weight: bold; }
+    .phone-style { font-size: 22px; font-weight: bold; color: #111; letter-spacing: 1px; }
+  </style>
 </head>
 <body>
 
-  <div>
+  <div class="container">
     <h1>💎 AMIR DIAMOND KGZ 💎</h1>
-    <p>Магазин алмазов Free Fire 🔥</p>
+    <p class="subtitle">Магазин алмазов Free Fire 🔥</p>
+
+    <div class="form-section">
+      <h4>1. Введите данные игрока:</h4>
+      
+      <label for="player-id">ID во Free Fire (Обязательно):</label>
+      <input type="number" id="player-id" placeholder="Например: 123456789">
+
+      <label for="player-contact">WhatsApp или Telegram (Для связи):</label>
+      <input type="text" id="player-contact" placeholder="Например: +996... или @ник (необязательно)">
+    </div>
 
     <h2>💎 Алмазы</h2>
-
-    <p>💎 110 алмазов — 80 сом <button>Купить</button></p>
-    <p>💎 341 алмаз — 240 сом <button>Купить</button></p>
-    <p>💎 572 алмаза — 390 сом <button>Купить</button></p>
-    <p>💎 1166 алмазов — 770 сом <button>Купить</button></p>
-    <p>💎 2398 алмазов — 1550 сом <button>Купить</button></p>
-    <p>💎 6160 алмазов — 3800 сом <button>Купить</button></p>
+    <div class="product-list">
+      <div class="product-item">
+        <span class="product-info">💎 110 алмазов</span>
+        <div>
+          <span class="product-price">80 сом</span>
+          <button class="buy-btn" onclick="buyItem('💎 110 алмазов', '80 сом')">Купить</button>
+        </div>
+      </div>
+      <div class="product-item">
+        <span class="product-info">💎 341 алмаз</span>
+        <div>
+          <span class="product-price">240 сом</span>
+          <button class="buy-btn" onclick="buyItem('💎 341 алмаз', '240 сом')">Купить</button>
+        </div>
+      </div>
+      <div class="product-item">
+        <span class="product-info">💎 572 алмаза</span>
+        <div>
+          <span class="product-price">390 сом</span>
+          <button class="buy-btn" onclick="buyItem('💎 572 алмаза', '390 сом')">Купить</button>
+        </div>
+      </div>
+      <div class="product-item">
+        <span class="product-info">💎 1166 алмазов</span>
+        <div>
+          <span class="product-price">770 сом</span>
+          <button class="buy-btn" onclick="buyItem('💎 1166 алмазов', '770 сом')">Купить</button>
+        </div>
+      </div>
+      <div class="product-item">
+        <span class="product-info">💎 2398 алмазов</span>
+        <div>
+          <span class="product-price">1550 сом</span>
+          <button class="buy-btn" onclick="buyItem('💎 2398 алмазов', '1550 сом')">Купить</button>
+        </div>
+      </div>
+      <div class="product-item">
+        <span class="product-info">💎 6160 алмазов</span>
+        <div>
+          <span class="product-price">3800 сом</span>
+          <button class="buy-btn" onclick="buyItem('💎 6160 алмазов', '3800 сом')">Купить</button>
+        </div>
+      </div>
+    </div>
 
     <h2>🎫 Ваучеры</h2>
+    <div class="product-list">
+      <div class="product-item">
+        <span class="product-info">🎫 Еженедельный Lite</span>
+        <div>
+          <span class="product-price">40 сом</span>
+          <button class="buy-btn" onclick="buyItem('🎫 Еженедельный Lite', '40 сом')">Купить</button>
+        </div>
+      </div>
+      <div class="product-item">
+        <span class="product-info">🎫 Ваучер на неделю</span>
+        <div>
+          <span class="product-price">150 сом</span>
+          <button class="buy-btn" onclick="buyItem('🎫 Ваучер на неделю', '150 сом')">Купить</button>
+        </div>
+      </div>
+      <div class="product-item">
+        <span class="product-info">🎫 Ваучер на месяц</span>
+        <div>
+          <span class="product-price">560 сом</span>
+          <button class="buy-btn" onclick="buyItem('🎫 Ваучер на месяц', '560 сом')">Купить</button>
+        </div>
+      </div>
+    </div>
 
-    <p>🎫 Еженедельный Lite — 40 сом <button>Купить</button></p>
-    <p>🎫 Ваучер на неделю — 150 сом <button>Купить</button></p>
-    <p>🎫 Ваучер на месяц — 560 сом <button>Купить</button></p>
+    <div class="features">
+      <div class="feature-card"><strong>⚡ Быстро</strong>Без комиссии</div>
+      <div class="feature-card"><strong>🔐 Безопасно</strong>Без входа в аккаунт</div>
+      <div class="feature-card"><strong>🆔 Просто</strong>Только по ID</div>
+    </div>
 
-    <h2>🛡️ Безопасно</h2>
-    <p>⚡ Без комиссии</p>
-    <p>🔐 Без входа в аккаунт</p>
-    <p>🆔 Только по ID</p>
-
-    <h3>📞 +996 777 464 932</h3>
+    <!-- Обновленный блок оплаты -->
+    <div id="payment-zone" class="payment-card">
+      <h3>📢 ИНСТРУКЦИЯ ПО ОПЛАТЕ:</h3>
+      Переведите сумму <span id="pay-price" class="highlight-red">0 сом</span> на кошелёк <b>О!Деньги</b>.
+      
+      <div class="payment-details">
+        📞 Номер телефона: <span id="phone-number" class="phone-style">0709065666</span> 
+        <button class="copy-btn" onclick="copyPhone()">Скопировать</button><br>
+        👤 Получатель: <b>ТУРДУКАН Н.</b><br>
+        ⚠️ В комментарии укажите ID: <span id="pay-id" class="highlight-blue">???</span>
+      </div>
+      
+      <p style="margin-bottom: 0; font-size: 14px; line-height: 1.4;">
+        После проверки платежа товар (<span id="pay-name" style="font-weight:bold;">алмазы</span>) будет отправлен на ваш игровой аккаунт! При возникновении вопросов мы свяжемся с вами.
+      </p>
+    </div>
   </div>
+
+  <script>
+    function buyItem(name, price) {
+      var idInput = document.getElementById('player-id').value.trim();
+      
+      if (!idInput) {
+        alert('Пожалуйста, сначала введите ID игрока в поле сверху!');
+        document.getElementById('player-id').focus();
+        return;
+      }
+      
+      document.getElementById('pay-price').innerText = price;
+      document.getElementById('pay-name').innerText = name;
+      document.getElementById('pay-id').innerText = idInput;
+      
+      var zone = document.getElementById('payment-zone');
+      zone.style.display = 'block';
+      
+      zone.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function copyPhone() {
+      var phone = document.getElementById('phone-number').innerText;
+      navigator.clipboard.writeText(phone).then(function() {
+        alert('Номер телефона скопирован: ' + phone);
+      }).catch(function() {
+        alert('Не удалось скопировать автоматически. Скопируйте вручную: ' + phone);
+      });
+    }
+  </script>
 
 </body>
 </html>
